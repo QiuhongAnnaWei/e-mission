@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style1.css" />
+  <script src="interaction.js"> </script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  // google.charts.setOnLoadCallback(drawChart);
+  </script>
+
+
+
+  <title>E-Missions</title>
+  <head>
+    <body>
+
+      <div class="header">
+        <h1>E-Missions<h1>
+        </div>
+
+        <p></p>
+        <p></p>
+
+
+        <div class="Left">
+          <div class="MeatLog">
+
+            <div class="Meat">
+              <select onchange="meat(this);"  class = "meat">
+                <div class="meat-content">
+                  <option selected>Select your meat consumption</option>
+                  <option value="Lamb">Lamb</option>
+                  <option value="Beef">Beef</option>
+                  <option value="Pork">Pork</option>
+                </div>
+              </select>
+
+
+              <p id="Lamb"></p>
+              <p id="Beef"></p>
+              <p id="Pork"></p>
+
+            </div>
+
+
+            <input class ="meatgram" id="meatgram" type="number" placeholder="gram(s)">
+
+            <input class="meatsubmit" type="submit" value="Submit" onclick="meatdata()"/><br>
+          </div>
+
+
+          <div class="DairyLog">
+            <div class="Dairy">
+              <select onchange="dairy(this);" class = "dairy">
+                <div class="dairy-content">
+                  <option selected>Select your dairy consumption</option>
+                  <option value="Cheese">Cheese</option>
+                  <option value="Milk">Milk</option>
+                </div>
+              </select>
+
+
+              <p id="Cheese"></p>
+              <p id="Milk"></p>
+
+            </div>
+
+            <input class ="dairygram" id="dairygram" type="number" placeholder="gram(s)">
+
+            <input class="dairysubmit" type="submit" value="Submit" onclick="dairydata()"/><br>
+          </div>
+
+        </div>
+
+        <div class="donebutton">
+          <button class="done" onclick="calculate()">I am done selecting</button> <br>
+        </div>
+
+        <div class="TotalChart">
+          <div class="Total">
+            <p class="totalcount" id="totalcount"></p>
+            <p class="annualcount1" id="annualcount1"></p>
+            <p class="annualcount2" id="annualcount2"></p>
+            <p class="annualcount3" id="annualcount3"></p>
+          </div>
+          <div id="columnchart"></div>
+
+        </div>
+
+
+
+<br>
+<br>
+<br>
+<hr>
+        <div class="instruction">
+          Enter your carbon emission from the past 7 days to generate a trendline:
+        </div>
+        <br>
+        <div class="Bottom">
+          <div class="Days">
+            day 1: <input class ="day1" id="day1" type="number" placeholder="CO2 emission"> <br>
+            day 2: <input class ="day2" id="day2" type="number" placeholder="CO2 emission"> <br>
+            day 3: <input class ="day3" id="day3" type="number" placeholder="CO2 emission"> <br>
+            day 4: <input class ="day4" id="day4" type="number" placeholder="CO2 emission"> <br>
+            day 5: <input class ="day5" id="day5" type="number" placeholder="CO2 emission"> <br>
+            day 6: <input class ="day6" id="day6" type="number" placeholder="CO2 emission"> <br>
+            day 7: <input class ="day7" id="day7" type="number" placeholder="CO2 emission"> <br>
+            <p> </p>
+            <button class="chartbutton" onclick="drawChart()">Draw Chart</button>
+          </div>
+
+          <div id="chart" style="width: 650px; height: 500px"></div>
+        </div>
+
+
+      </body>
+      </html>

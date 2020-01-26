@@ -1,0 +1,183 @@
+body{
+  background-color: #EEEEEE;
+}
+
+.header{
+  background-color: #85b6f1;
+  color: white;
+  text-align: center;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  padding: 20px;
+}
+
+.search-box{
+  text-align: center;
+}
+
+
+
+.Overall{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.MeatLog {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.DairyLog {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+
+.Left{
+  font-size: 21px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+
+
+
+.donebutton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.Total{
+  font-size: 25px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+
+.totalcount{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.annualcount1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.annualcount2{
+  font-size: 40px;
+  color: #0c5dc7;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.annualcount3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.meat {
+  background-color: #e07467;
+  color: white;
+  padding: 10px;
+  font-size: 22px;
+  border: none;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.dairy {
+  background-color: #99c3d1;
+  color: white;
+  padding: 10px;
+  font-size: 22px;
+  border: none;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.meatsubmit{
+  font-size: 22px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.dairysubmit{
+  font-size: 22px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.meat-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.dairy-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+
+
+.done {
+  background-color: #85b6f1;
+  color: white;
+  padding: 10px;
+  font-size: 23px;
+  border: none;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.Days {
+  font-size: 22px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.chartbutton {
+  background-color: #85b6f1;
+  color: white;
+  padding: 10px;
+  font-size: 23px;
+  border: none;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.TotalChart{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.Bottom {
+  display: flex;
+  justify-content: center;
+}
+
+.instruction{
+  font-size: 26px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+
+.source{
+  font-size: 13px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
