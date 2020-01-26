@@ -32,7 +32,7 @@ function drawChart() {
       fontSize: 23, // 12, 18 whatever you want (don't specify px)
     },
     title: 'Daily CO2 Emission for the Past 7 Days' ,
-    curveType: 'function',
+    curveType: 'none',
     legend: 'none',
     hAxis : {textStyle:
       {fontName: 'Yanone Kaffeesatz',
@@ -70,6 +70,7 @@ function drawChart() {
 
     function meatdata()
     {
+      if ((document.getElementById("meatgram").value * 1) > 0){
       if (meatSelect === 'Lamb') {
         lambCount = document.getElementById("meatgram").value;
         document.getElementById("Lamb").innerHTML = "Lamb (39.2 grams of CO2/gram): " + lambCount + " gram(s)";
@@ -80,6 +81,7 @@ function drawChart() {
         porkCount = document.getElementById("meatgram").value
         document.getElementById("Pork").innerHTML = "Pork (12.1 grams of CO2/gram): " + porkCount + " gram(s)";
       }
+    }
     }
 
 
@@ -99,6 +101,7 @@ function drawChart() {
 
     function dairydata()
     {
+      if ((document.getElementById("dairygram").value * 1) > 0){
       if (dairySelect === 'Cheese') {
         cheeseCount = document.getElementById("dairygram").value
         document.getElementById("Cheese").innerHTML = "Cheese (13.5 grams of CO2/gram): " + cheeseCount + " gram(s)";
@@ -107,6 +110,7 @@ function drawChart() {
         document.getElementById("Milk").innerHTML = "Milk (1.9 grams of CO2/gram): " + milkCount + " gram(s)";
       }
     }
+    }
 
 
 
@@ -114,13 +118,13 @@ function drawChart() {
 
 
     function calculate() {
-      var total =       Math.round((lambCount * 39.2 + beefCount * 27.0 + porkCount * 12.1 +
+      var total =    Math.round((lambCount * 39.2 + beefCount * 27.0 + porkCount * 12.1 +
         cheeseCount * 13.5 + milkCount * 1.9)*10)/10;
         document.getElementById("totalcount").innerHTML =  "Total Estimated CO2 Emission: " + total + " gram(s)";
-        var annual =  total * 365
+        var annual =  Math.round((total * 365)*10)/10;
         document.getElementById("annualcount1").innerHTML =  "If this is your daily carbon emission, this accounts to"
         document.getElementById("annualcount2").innerHTML =  annual
-        document.getElementById("annualcount3").innerHTML =  "grams of CO2 emission a year";
+        document.getElementById("annualcount3").innerHTML =  "gram(s) of CO2 emission a year";
 
         // Define the chart to be drawn.
 
@@ -142,7 +146,6 @@ function drawChart() {
           width: 650,
           height: 500,
           title: 'Annual Estimated CO2 Emission (grams/year)' ,
-          curveType: 'function',
           legend: 'none',
             vAxis : {textStyle:
               {fontName: 'Yanone Kaffeesatz',
