@@ -61,12 +61,21 @@ function drawChart() {
         meatSelect = 'Beef';
       }else if (e.value === 'Pork') {
         meatSelect = 'Pork';
+      }else if (e.value === 'Turkey') {
+        meatSelect = 'Turkey';
+      }else if (e.value === 'Chicken') {
+        meatSelect = 'Chicken';
+      }else if (e.value === 'Tuna') {
+        meatSelect = 'Tuna';
       }
     }
 
     var lambCount = 0;
     var beefCount = 0;
     var porkCount = 0;
+    var turkeyCount = 0;
+    var chickenCount = 0;
+var tunaCount = 0;
 
     function meatdata()
     {
@@ -80,6 +89,15 @@ function drawChart() {
       }else if (meatSelect === 'Pork') {
         porkCount = document.getElementById("meatgram").value
         document.getElementById("Pork").innerHTML = "Pork (12.1 grams of CO2/gram): " + porkCount + " gram(s)";
+      }else if (meatSelect === 'Turkey') {
+        turkeyCount = document.getElementById("meatgram").value
+        document.getElementById("Turkey").innerHTML = "Turkey (10.9 grams of CO2/gram): " + turkeyCount + " gram(s)";
+      }else if (meatSelect === 'Chicken') {
+        chickenCount = document.getElementById("meatgram").value
+        document.getElementById("Chicken").innerHTML = "Chicken (6.9 grams of CO2/gram): " + chickenCount + " gram(s)";
+      }else if (meatSelect === 'Tuna') {
+        tunaCount = document.getElementById("meatgram").value
+        document.getElementById("Tuna").innerHTML = "Tuna (6.1 grams of CO2/gram): " + tunaCount + " gram(s)";
       }
     }
     }
@@ -118,8 +136,8 @@ function drawChart() {
 
 
     function calculate() {
-      var total =    Math.round((lambCount * 39.2 + beefCount * 27.0 + porkCount * 12.1 +
-        cheeseCount * 13.5 + milkCount * 1.9)*10)/10;
+      var total =    Math.round((lambCount * 39.2 + beefCount * 27.0 + porkCount * 12.1 + turkeyCount * 10.9 +
+        chickenCount * 6.9 + tunaCount * 6.1 + cheeseCount * 13.5 + milkCount * 1.9)*10)/10;
         document.getElementById("totalcount").innerHTML =  "Total Estimated CO2 Emission: " + total + " gram(s)";
         var annual =  Math.round((total * 365)*10)/10;
         document.getElementById("annualcount1").innerHTML =  "If this is your daily carbon emission, this accounts to"
