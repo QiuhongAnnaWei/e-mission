@@ -6,5 +6,5 @@ This micro webpage is a one-stop tracker and calculator of carbon emission from 
 
 ## To use
 
-open ```index.html```
+open ```Product/Index.html```
 
